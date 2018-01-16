@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/String.iml" filepath="$PROJECT_DIR$/String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ValidPalindrome.iml" filepath="$PROJECT_DIR$/ValidPalindrome.iml" />
     </modules>
   </component>
 </project>
