@@ -2,11 +2,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello World!");
+        System.out.println(countBinarySubstrings("1100"));
     }
 
 
-    public int countBinarySubstrings(String s) {
+    static int countBinarySubstrings(String s) {
         if (s == null || s.length() <= 0) return 0;
         /* 当前后两个字符不同的时候，作为标志
            例如 00111，preValueCount 遍历的第一个1的时候，此时s[i] != s[i - 1]
