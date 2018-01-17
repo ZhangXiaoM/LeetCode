@@ -46,9 +46,10 @@ public class Main {
 
     public static void main(String[] args) {
         char[] cs = {'c','f','j'};
-        System.out.println(nextGreatestLetter(cs, 'c'));
+        System.out.println(nextGreatestLetter2(cs, 'k'));
     }
 
+    // time:O(N) space:O(N)
     public static char nextGreatestLetter(char[] letters, char target) {
 
         if (target < letters[0]) return letters[0];
@@ -65,5 +66,21 @@ public class Main {
         }
 
         return 0;
+    }
+
+    // binary search O(lgN)
+    public static char nextGreatestLetter2(char[] letters, char target) {
+
+        int low = 0;
+        int high = letters.length;
+        while (low < high) {
+            int mid = (low + high) / 2;
+            if (target < letters[mid]) {
+                high = mid;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return letters[low % letters.length];
     }
 }
