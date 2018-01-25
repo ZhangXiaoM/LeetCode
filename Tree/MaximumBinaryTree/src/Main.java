@@ -53,7 +53,7 @@ public class Main {
         TreeNode node = creatNode(nums, 0, nums.length - 1);
         return node;
     }
-    
+
     public static TreeNode creatNode(int[] nums, int left, int right) {
         if (left < 0 || right >= nums.length || left > right)
             return null;
