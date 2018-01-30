@@ -37,6 +37,10 @@ public class Main {
     }
 
     // time complexity O(N)
+    // local inventions equal to global inventions means that all global inventions is
+    // local inventions, because global inventions is superset of local inventions.
+    // so that means none A[i + 2(> 2)] > A[i], if has i let A[i + 2(> 2)] > A[i], will
+    // cause one global invention is not local invention, so return false.
 
     public static boolean isIdealPermutation(int[] A) {
         int max = 0;
