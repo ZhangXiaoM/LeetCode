@@ -34,6 +34,7 @@ public class Main {
         System.out.println(findPairs(nums, 0));
     }
 
+    // time complexity O(N * lgN), space complexity O(1)
     public static int findPairs(int[] nums, int k) {
 
         if (nums == null) return 0;
