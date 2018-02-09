@@ -24,6 +24,42 @@ public class Main {
     }
 
     public static boolean isPalindrome(ListNode head) {
+
+        if (head == null) return true;
+
+        ListNode s = head, f = head;
+
+        while (f != null && f.next != null) {
+            s = s.next;
+            f = f.next.next;
+        }
+
+        if (f != null) {
+            s = s.next;
+        }
+
+        s = reverseList(s);
+        f = head;
+
+        while (s != null) {
+            if (s.val != f.val) return false;
+            s = s.next;
+            f = f.next;
+        }
         
+        return true;
+    }
+
+    public static ListNode reverseList(ListNode head) {
+        ListNode temp = head;
+        ListNode pre = null, next;
+        while (temp != null) {
+            next = temp.next;
+            temp.next = pre;
+            pre = temp;
+            temp = next;
+        }
+
+        return pre;
     }
 }
