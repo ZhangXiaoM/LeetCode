@@ -46,7 +46,7 @@ public class Main {
             s = s.next;
             f = f.next;
         }
-        
+
         return true;
     }
 
