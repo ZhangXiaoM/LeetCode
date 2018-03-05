@@ -21,7 +21,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.print(convertToBase7(0));
+        System.out.print(convertToBase7(-100));
     }
 
     public static String convertToBase7(int num) {
@@ -32,18 +32,11 @@ public class Main {
         int val = num;
         while (val != 0) {
             int temp = Math.abs(val % 7);
-            res += String.valueOf(temp);
+            res = String.valueOf(temp) + res;
             val /= 7;
         }
-        res += num < 0? "-" : "";
+        res = num < 0? "-" + res : "" + res;
 
-        char[] nums = res.toCharArray();
-        for (int i = 0; i < nums.length / 2; ++i) {
-            char temp = nums[i];
-            nums[i] = nums[nums.length - 1 - i];
-            nums[nums.length - 1 - i] = temp;
-        }
-
-        return new String(nums);
+        return res;
     }
 }
