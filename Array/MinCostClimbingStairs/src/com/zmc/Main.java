@@ -30,8 +30,9 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        int[] cost = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
-        System.out.print(minCostClimbingStairs(cost));
+//        int[] cost = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
+        int[] cost = {10, 15};
+        System.out.print(minCostClimbingStairsByDP(cost));
     }
 
     public static int minCostClimbingStairs(int[] cost) {
@@ -48,5 +49,19 @@ public class Main {
         }
 
         return res;
+    }
+
+    public static int minCostClimbingStairsByDP(int[] cost) {
+
+        int[] dp = new int[cost.length + 1];
+        dp[0] = cost[0];
+        dp[1] = cost[1];
+
+        for (int i = 2; i <= cost.length; ++i) {
+            int t = i == cost.length? 0 : cost[i];
+            dp[i] = Math.min(dp[i - 1] + t, dp[i - 2] + t);
+        }
+
+        return dp[cost.length];
     }
 }
