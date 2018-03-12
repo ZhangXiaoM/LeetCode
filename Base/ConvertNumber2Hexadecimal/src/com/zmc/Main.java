@@ -36,7 +36,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.print(toHex(0));
+        System.out.print(toHex(-1));
     }
 
     public static String toHex(int num) {
