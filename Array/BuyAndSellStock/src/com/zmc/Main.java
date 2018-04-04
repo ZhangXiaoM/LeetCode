@@ -27,8 +27,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        int[] prices = {7, 2, 5, 3, 6, 4, 1, 16};
-        System.out.print(maxProfit(prices));
+        int[] prices = {2, 4, 1};
+        System.out.print(maxProfit3(prices));
     }
 
     // time complexity O(N^2)  submission error time limit exceeded
@@ -60,5 +60,25 @@ public class Main {
         }
 
         return maxDif;
+    }
+
+    // solution with dp
+    public static int maxProfit3(int[] prices) {
+        if (prices == null || prices.length == 0) return 0;
+
+        int leftMin = prices[0];
+        int[] dp = new int[prices.length];
+        dp[0] = 0;
+
+        for (int i = 1; i < prices.length; ++i) {
+            if (prices[i] > leftMin) {
+                dp[i] = Math.max(dp[i - 1], prices[i] - leftMin);
+            } else {
+                leftMin = prices[i];
+                dp[i] = dp[i - 1];
+            }
+        }
+
+        return dp[dp.length - 1];
     }
 }
