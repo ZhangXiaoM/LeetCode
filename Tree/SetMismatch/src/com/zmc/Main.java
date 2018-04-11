@@ -32,11 +32,12 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        int[] nums = {2,3,2,4};
-        int[] res = findErrorNums(nums);
+        int[] nums = {1,2,2,4};
+        int[] res = findErrorNums2(nums);
 
     }
 
+    // O(N) time O(N) space
     public static int[] findErrorNums(int[] nums) {
         int[] res = new int[2];
         if (nums == null || nums.length == 0) return res;
@@ -56,6 +57,26 @@ public class Main {
             if (map.get(i) == null) {
                 res[1] = i;
             }
+        }
+
+        return res;
+    }
+
+    // O(N) time O(1) space, but need change original data
+    public static int[] findErrorNums2(int[] nums) {
+        int[] res = new int[2];
+        if (nums == null || nums.length == 0) return res;
+
+        for (int x: nums) {
+            if (nums[Math.abs(x) - 1] < 0) {
+                res[0] = Math.abs(x);
+            } else {
+                nums[Math.abs(x) - 1] *= -1;
+            }
+        }
+
+        for (int i = 0; i < nums.length; ++i) {
+            if (nums[i] > 0) res[1] = i + 1;
         }
 
         return res;
