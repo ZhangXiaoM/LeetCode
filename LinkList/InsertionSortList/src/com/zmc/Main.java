@@ -29,7 +29,7 @@ public class Main {
         head.next.next.next.next.next.next.next.next = new ListNode(11);
         head.next.next.next.next.next.next.next.next.next = new ListNode(15);
 
-        head = insertionSortList(head);
+        head = insertionSortList2(head);
     }
 
     public static ListNode insertionSortList(ListNode head) {
@@ -69,5 +69,27 @@ public class Main {
             }
         }
         return head;
+    }
+
+
+    public static ListNode insertionSortList2(ListNode head) {
+        if (head == null || head.next == null) return head;
+
+        ListNode helper = new ListNode(0);
+        ListNode cur = head, cur_next, pre = helper;
+
+        while (cur != null) {
+            cur_next = cur.next;
+            while (pre.next != null && pre.next.val < cur.val) {
+                pre = pre.next;
+            }
+            
+            cur.next = pre.next;
+            pre.next = cur;
+            pre = helper;
+            cur = cur_next;
+        }
+
+        return helper.next;
     }
 }
