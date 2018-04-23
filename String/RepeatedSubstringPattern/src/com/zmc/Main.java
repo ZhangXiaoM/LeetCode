@@ -31,9 +31,10 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.print(repeatedSubstringPattern("abcabcabcabc"));
+        System.out.print(repeatedSubstringPattern2("abacababacab"));
     }
 
+    // time complexity O(N ^ 2 / M) N -> s.len, M -> subString.len
     public static boolean repeatedSubstringPattern(String s) {
         if (s == null || s.length() <= 1) return false;
 
@@ -58,5 +59,26 @@ public class Main {
             idx ++;
         }
         return false;
+    }
+
+
+    public static boolean repeatedSubstringPattern2(String s) {
+        if (s == null || s.length() <= 1) return false;
+
+        int[] pmt = new int[s.length()];
+        int i = 1, j = 0;
+        pmt[0] = 0;
+        while (i < s.length() - 1) {
+            if (j == 0 || s.charAt(i) == s.charAt(j)) {
+                ++i;
+                ++j;
+                pmt[i] = j;
+            } else {
+                j = pmt[j];
+            }
+        }
+
+        int m_len = pmt[s.length() - 1];
+        return m_len > 0 && s.length() % (s.length() - m_len - 1) == 0;
     }
 }
