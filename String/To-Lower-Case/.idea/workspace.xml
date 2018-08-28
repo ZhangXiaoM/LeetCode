@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92e2dea8-cd1f-455b-8a7a-006652481552" name="Default Changelist" comment="" />
+    <list default="true" id="ef7dcab9-9d4b-4db7-990c-19577191079c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Array/Unique_Morse_Code_Words/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Array/Unique_Morse_Code_Words/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,26 +12,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="1904712438">
+    <session id="125305320">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="177" />
+          <entry key="java" value="171" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="177" />
+          <entry key="JAVA" value="171" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.file.types.open" />
-      <usages-collector id="statistics.file.extensions.open" />
     </session>
   </component>
   <component name="FileEditorManager">
@@ -37,11 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/zmc/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="437">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -72,12 +68,9 @@
     <panes>
       <pane id="Scope" />
       <pane id="ProjectPane" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -94,7 +87,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.zmc.Main" />
-      <module name="Unique_Morse_Code_Words" />
+      <module name="To-Lower-Case" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -108,11 +101,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="92e2dea8-cd1f-455b-8a7a-006652481552" name="Default Changelist" comment="" />
-      <created>1535428488937</created>
+      <changelist id="ef7dcab9-9d4b-4db7-990c-19577191079c" name="Default Changelist" comment="" />
+      <created>1535434687127</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1535428488937</updated>
+      <updated>1535434687127</updated>
     </task>
     <servers />
   </component>
@@ -153,11 +146,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/zmc/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="437">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
